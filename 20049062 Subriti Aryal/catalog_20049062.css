@@ -1,0 +1,255 @@
+@namespace st url("https://www.giftgalore.com/home");
+@namespace gt url("https://www.giftgalore.com/giftcards");
+@namespace url(http://www.w3.org/1999/xhtml);
+
+body{  
+    overflow-x: hidden;
+    background: linear-gradient(to right, rgb(153, 238, 164),pink,rgb(153, 238, 164));
+}
+
+a{
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 10px;
+    color:wheat;
+}
+
+NavigationBar{
+    padding: 10px;
+    margin-top: -8px;
+    margin-left: -10px;
+    width: 100%;
+    background-color: black;
+    background: linear-gradient(to right,#5680E9,#5AB9EA,#8860D0, black);
+    font-size: large;
+    color:rgb(250, 250, 250);
+    display: flex;
+    justify-content: right;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+nav{
+    padding: 10px;
+    margin-left: -10px;
+    width: 101%;
+    background-image: linear-gradient(to bottom, #5680E9,#8860D0,black);
+}
+
+nav h3{
+    margin-left: 500px;
+    color: white;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+#Store{
+    
+    background: linear-gradient(to bottom, rgb(153, 238, 164), pink);
+    height: 175px;
+    width: 200%;
+    display: block;
+}
+
+#StoreLogo img{
+    display: inline;
+    height: 160px; 
+    margin-left: 8px; 
+    margin-top: -48px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+name{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    color:rgb(180, 61, 87);
+    margin-left: 588px;
+    padding: 10px;
+}
+
+address{
+    margin-top: -110px;
+    margin-left: 650px;
+}
+
+website{
+    float: right;
+    border: 1px solid black;
+    background-color: yellow;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 4px;
+    margin-right: 1324px;
+    display: block;
+    margin-top: -2px;
+}
+
+i{
+    padding-right: 10px;
+    padding-left: 10px;
+    color: white;
+    margin-left: 920px;
+    padding: 8px;
+    display: block;
+    border-left: 0.5px solid black;
+    border-top: 1px solid black;
+}
+
+website:hover{
+    opacity: 0.8;
+    
+}
+
+socials{
+    display: block;
+    margin-top: -25px;
+}
+
+.fa:hover{
+    opacity: 0.7;
+}
+
+.fa-facebook{
+    margin-left: 1310px;
+    margin-top: -10px;
+    padding-left: 11px; 
+    padding-right: 11px;  
+    background-color: #3B5998;
+}
+
+.fa-twitter{
+    margin-left: 1310px;
+    background-color: #55ACEE;
+}
+
+.fa-linkedin{
+    margin-left: 1310px;
+    margin-bottom: 1px;
+    border-bottom: 1px solid black;
+    padding-right: 9px; background-color: rgb(81, 124, 204);
+}
+
+
+li{
+    margin-top: -50px;
+    margin-left: 540px;
+}
+
+
+#Tel_Work{
+    margin-top: -18px;
+    margin-left: 710px;
+}
+
+#Offer{
+    display: block;
+    margin-top: -10px;
+    background-color: white;
+    margin-left: -10px;
+    width: 102%;
+}
+
+#Offer img{
+    margin-left: 38px;
+}
+
+#Gifts img{
+    display: block;
+}
+
+
+#Desc{
+    position: absolute;
+    margin-left: 350px;
+}
+
+gname{
+    margin-left: 180px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 10px;
+}
+
+.show{
+    border: 1px solid black;
+}
+
+.hide{
+    display: none;
+    border: 1px solid black; 
+    background-color: black; 
+    color: white; 
+    padding-left: 30px; 
+    padding-right: 40px; 
+    margin-left: -100px;
+}
+
+.show:hover + .hide{
+    display:inline;
+    background-color: black;
+}
+
+type{
+    color: rgb(46, 4, 85);
+    font-size: 18px;
+    margin-left: 215px;
+    padding: 10px;
+    background-color: #ccec81;
+    border: 2px solid #5F6366;
+    
+}
+
+#Desc type{
+    display: block;
+    margin-top: -35px;
+    margin-right: 400px;
+    margin-left: 470px;
+    color: blue;
+}
+
+cost{
+    margin-top: 40px;
+    display: block;
+    margin-left: 415px;
+    background-color: rgb(245, 138, 236);     
+    margin-right: 700px;
+    border: 1px solid blueviolet;
+    font-weight: bold;
+}
+
+#Desc cost{
+    margin-right: 350px;
+    margin-top: 10px;
+}
+
+#Desc rechargeable, #Desc category, #Desc issue, #Desc valid, #Desc validRegion, #Desc noOfUsers, #Desc discount, #Desc payment, #Desc rating{
+    margin-right: 350px;
+}
+
+#li3, #li4, #li5, #li6, #li7, #li8, #li9,#li10,#li11,#li12,#li13,#li14,#li15,#li16,#li17,#li18,#li19,#li20,#li21,#li22,#li23,#li24,#li25,#li26,#li27,#li28,#li29,#li30,#li31,#li32,#li33,#li34,#li35,#li36,#li37,#li38,#li39,#li40,#li41,#li42,#li43,#li44,#li45,#li46,#li47,#li48, #li49,#li50,#li51,#li52,#li53,#li54{
+    margin-left: 40px;
+    margin-top: 5px;
+    display: block;
+    background-image: linear-gradient(to right, #ebf7ee, #d4c4d8, #c77eda, #670e7e);
+    border: 1px dotted black; 
+    padding-left: 10px;
+}
+
+category,issue,valid,validRegion,noOfUsers,discount,rechargeable, payment,rating{
+    margin-left: 415px;
+    display: block;
+    font-weight: bold;
+    background-image: linear-gradient(to right, #89b8fa, #95e0e7, #bee5e9, white);
+    margin-right: 700px;
+    padding-left: 10px;
+    border: 1px solid green;
+    padding-top: 5px;
+}
+
+category{
+    margin-top: -190px;
+}
+

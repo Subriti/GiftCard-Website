@@ -1,0 +1,252 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="Store">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="name"></xs:element>
+                <xs:element ref="logo"></xs:element>
+                <xs:element ref="website"></xs:element>
+                <xs:element ref="address"></xs:element>
+                <xs:element ref="socials"></xs:element>
+                <xs:element ref="telephone"></xs:element>
+                <xs:element ref="Gifts"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:element name="name" type="xs:string"></xs:element>
+
+    <xs:element name="logo">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="L_id" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:attribute name="L_id" type="xs:string" />
+
+
+    <xs:element name="website">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="https?://([^/:]+\.[a-zA-Z]{2,10}|([0-9]{1,3}\.){3}[0-9]{1,3})(:[0-9]+)?(/.*)?" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+
+    <xs:element name="address">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="AddrType" use="optional" default="Permanent"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+
+    <xs:attribute name="AddrType">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Permanent" />
+				<xs:enumeration value="Temporary" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+    <xs:element name="socials">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+                    <xs:attribute ref="S_id" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attribute name="S_id" type="xs:anyURI"></xs:attribute>
+
+
+    <xs:element name="telephone">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ul" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:element name="ul">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="li" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	
+    <xs:element name="li">
+        <xs:complexType>
+			<xs:simpleContent>
+                <xs:extension base="xs:string">
+                    <xs:attribute ref="T_id" use="required" />
+                </xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:attribute name="T_id">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Tel_Mobile" />
+				<xs:enumeration value="Tel_Work" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+
+    <xs:element name="Gifts">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Gift" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:element name="Gift">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="gname" minOccurs="1" maxOccurs="2" />
+				<xs:element ref="type" />
+				<xs:element ref="cost" />
+                <xs:element ref="category"  minOccurs="0" maxOccurs="1"/>
+                <xs:element ref="validity" />
+				<xs:element ref="noOfUsers"  minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="rechargeable" />
+                <xs:element ref="discount"  minOccurs="0" maxOccurs="1"/>
+				<xs:element ref="payment" />
+				<xs:element ref="rating"  minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+			<xs:attribute ref="id"/>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="gname" type="xs:string"></xs:element>
+
+    <xs:element name="type">
+        <xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="Physical Card" />
+				<xs:enumeration value="Digital Card" />
+			</xs:restriction>
+		</xs:simpleType>
+    </xs:element>
+
+    
+	<xs:element name="cost">
+		<xs:complexType mixed="true">
+			<xs:sequence>
+				<xs:element ref="costing" minOccurs="1" maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute ref="currency" fixed="Rupees"/>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:attribute name="currency" type="xs:string" />
+
+    <xs:element name="costing">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="id" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+    <xs:attribute name="id" type="xs:string" />
+
+    <xs:element name="category" type="xs:string"/>
+	
+    <xs:element name="validity">
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element ref="issue" />
+                <xs:element ref="valid" />
+                <xs:element ref="validRegion" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+
+    <xs:element name="issue">
+        <xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="date" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="date">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="AD" />
+				<xs:enumeration value="BS" />
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
+
+
+
+    <xs:element name="valid">
+        <xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="period" fixed="years" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="period" type="xs:string" />
+
+    <xs:element name="validRegion">
+        <xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="location" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="location" type="xs:string" />
+
+
+    <xs:element name="noOfUsers" type="xs:string"></xs:element>
+
+    <xs:element name="rechargeable">
+        <xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">    
+					<xs:attribute ref="type" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+    </xs:element>
+
+    <xs:attribute name="type" type="xs:boolean" /> 
+
+    <xs:element name="discount" type="xs:string"></xs:element>
+
+    <xs:element name="payment" type="xs:string"></xs:element>
+
+    <xs:element name="rating" type="xs:string"></xs:element>
+   
+</xs:schema>

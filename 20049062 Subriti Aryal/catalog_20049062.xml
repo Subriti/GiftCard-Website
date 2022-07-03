@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Store is the root element here, it has details regarding itself and the giftcards which is available in its store-->
+<Store xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="catalog_20049062.xsd">
+    <name>Gift Galore</name>
+    <!--Logo stores the logo image-->
+    <logo L_id="StoreLogo"></logo>
+    <website>https://www.giftgalore.com</website>
+    <address AddrType="Permanent">Kathmandu, Nepal</address>
+
+    <!--Socials store the link and icons to various social profiles-->
+    <socials S_id="URL"></socials>
+    <telephone>
+         <!-- Usage of ul list for storing of phone numbers-->
+        <ul>                    
+            <li T_id="Tel_Mobile">+977 9843346520</li>
+            <li T_id="Tel_Work">01 5148280</li>
+        </ul>
+    </telephone>
+
+
+    <!-- All the gift cards available in the store are written under gifts-->
+    <Gifts>
+
+        <!-- Individual gift cards are specified under Gift -->
+        <Gift id="XBOX">
+            <gname>XBOX</gname>
+            <gname>Buy</gname>   
+            <type>Physical Card</type>          <!-- The type of the gift card; digital or physical-->
+            <cost currency="Rupees">            <!--Pricings of various gift cards in NPR for convenience-->
+                Pricings:
+                <costing id="li3">$10: Rs.1200</costing>
+                <costing id="li4">$15: Rs.1800</costing>
+                <costing id="li5">$25: Rs.3000</costing>
+                <costing id="li6">$50: Rs.6000</costing>
+            </cost>
+            <validity>                          <!-- Issue, Expiry period and regions valid for the gift card-->
+                <issue date="AD">Issue Date: 20/08/2021</issue>
+                <valid period="years">Valid Years: 2</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 10</noOfUsers>      <!-- Users eligible for the discount -->
+            <rechargeable type="false">rechargeable: No</rechargeable>  <!-- Checks if the gift card is for one time use or money can be loaded into it -->
+            <discount>Discount: 10%</discount>      <!-- The owner of the gift card gets 10% discount on services of the gift card-->
+            <payment>Payment Method: Cash</payment>     <!-- Payment method for the gift card-->
+            <rating>Rating: 4</rating>              <!-- Ratings/Feedbacks from the user-->
+        </Gift>
+
+        <Gift id="StarBucks">
+            <gname>StarBucks</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li7">$25: Rs.3000</costing>
+                <costing id="li8">$50: Rs.6000</costing>
+                <costing id="li9">$75: Rs.9000</costing>
+            </cost>
+            <category> Category: Food</category>
+            <validity>
+                <issue date="AD">Issue Date: 25/12/2021</issue>
+                <valid period="years">Valid Years: 3</valid>
+                <validRegion location="country">Region: India</validRegion>
+            </validity>
+            <rechargeable type="true">rechargeable: Yes</rechargeable>
+            <discount>Discount: 5%</discount>
+            <payment>Payment Method: Online</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+        <Gift id="Amazon">
+            <gname>Amazon</gname>
+            <gname>Buy</gname>
+            <type>Physical Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li10">$10: Rs.1200</costing>
+                <costing id="li11">$25: Rs.3000</costing>
+                <costing id="li12">$50: Rs.6000</costing>
+                <costing id="li13">$100: Rs.12000</costing>
+            </cost>
+            <category> Category: E-Commerce</category>
+            <validity>
+                <issue date="AD">Issue Date: 25/09/2021</issue>
+                <valid period="years">Valid Years: 1</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 50</noOfUsers>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <discount>Discount: 10%</discount>
+            <payment>Payment Method: Cash</payment>
+            <rating>Rating: 3</rating>
+        </Gift>
+
+        <Gift id="Adidas">
+            <gname>Adidas</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li14">$50: Rs.6000</costing>
+                <costing id="li15">$100: Rs.12000</costing>
+            </cost>
+            <category> Category: Sports</category>
+            <validity>
+                <issue date="AD">Issue Date: 02/02/2021</issue>
+                <valid period="years">Valid Years: 1</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 30</noOfUsers>
+            <rechargeable type="true">rechargeable: Yes</rechargeable>
+            <discount>Discount: 15%</discount>
+            <payment>Payment Method: Online</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+
+        <Gift id="Netflix">
+            <gname>Netflix</gname>
+            <gname>Buy</gname>
+            <type>Physical Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li16">$15: Rs.1800</costing>
+                <costing id="li17">$30: Rs.3600</costing>
+                <costing id="li18">$60: Rs.7300</costing>
+            </cost>
+            <category> Category: Entertainment</category>
+            <validity>
+                <issue date="AD">Issue Date: 10/05/2021</issue>
+                <valid period="years">Valid Years: 2</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 500</noOfUsers>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <discount>Discount: 5%</discount>
+            <payment>Payment Method: Cash</payment>
+            <rating>Rating: 4</rating>
+        </Gift>
+
+        <Gift id="KFC">
+            <gname>KFC</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li19">$50: Rs.6000</costing>
+                <costing id="li20">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Food</category>
+            <validity>
+                <issue date="AD">Issue Date: 18/10/2021</issue>
+                <valid period="years">Valid Years: 2</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 1000</noOfUsers>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <discount>Discount: 10%</discount>
+            <payment>Payment Method: Online</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+
+        <Gift id="iTunes">
+            <gname>iTunes</gname>
+            <gname>Buy</gname>
+            <type>Physical Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li21">$5: Rs.600</costing>
+                <costing id="li22">$25: Rs.3000</costing>
+                <costing id="li23">$50: Rs.6000</costing>
+                <costing id="li24">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Entertainment</category>
+            <validity>
+                <issue date="AD">Issue Date: 20/02/2022</issue>
+                <valid period="years">Valid Years: 3</valid>
+            </validity>
+            <noOfUsers>Number Of Users: 40</noOfUsers>
+            <rechargeable type="true">rechargeable: Yes</rechargeable>
+            <discount>Discount: 10%</discount>
+            <payment>Payment Method: Cash</payment>
+            <rating>Rating: 3</rating>
+        </Gift>
+
+
+        <Gift id="apple">
+            <gname>Apple</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li26">$25: Rs.3000</costing>
+                <costing id="li27">$50: Rs.6000</costing>
+                <costing id="li28">$100: Rs.12100</costing>
+            </cost>
+            <validity>
+                <issue date="AD">Issue Date: 19/1/2022</issue>
+                <valid period="years">Valid Years: 1</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 500</noOfUsers>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <discount>Discount: 20%</discount>
+            <payment>Payment Method: Online</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+
+        <Gift id="Sephora">
+            <gname>Sephora</gname>
+            <gname>Buy</gname>
+            <type>Physical Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li22">$50: Rs.6000</costing>
+                <costing id="li23">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Beauty</category>
+            <validity>
+                <issue date="AD">Issue Date: 12/06/2021</issue>
+                <valid period="years">Valid Years: 3</valid>
+                <validRegion location="country">Region: India</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 500</noOfUsers>
+            <rechargeable type="true">rechargeable: Yes</rechargeable>
+            <discount>Discount: 15%</discount>
+            <payment>Payment Method: Cash</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+
+        <Gift id="VictoriaSecret">
+            <gname>V. Secret</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li24">$25: Rs.3000</costing>
+                <costing id="li25">$50: Rs.6000</costing>
+                <costing id="li26">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Beauty</category>
+            <validity>
+                <issue date="AD">Issue Date: 25/12/2021</issue>
+                <valid period="years">Valid Years: 4</valid>
+                <validRegion location="country">Region: India</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 500</noOfUsers>
+            <rechargeable type="true">rechargeable: Yes</rechargeable>
+            <discount>Discount: 15%</discount>
+            <payment>Payment Method: Online</payment>
+        </Gift>
+
+
+        <Gift id="Microsoft">
+            <gname>Microsoft</gname>
+            <gname>Buy</gname>
+            <type>Physical Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li27">$10: Rs.1200</costing>
+                <costing id="li28">$25: Rs.3000</costing>
+                <costing id="li29">$50: Rs.6000</costing>
+                <costing id="li30">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Entertainment</category>
+            <validity>
+                <issue date="AD">Issue Date: 22/07/2021</issue>
+                <valid period="years">Valid Years: 2</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 1000</noOfUsers>
+            <rechargeable type="true">rechargeable: Yes</rechargeable>
+            <discount>Discount: 10%</discount>
+            <payment>Payment Method: Cash</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+
+        <Gift id="Disnep+">
+            <gname>Disnep+</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li31">$25: Rs.3000</costing>
+                <costing id="li32">$50: Rs.6000</costing>
+                <costing id="li33">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Entertainment</category>
+            <validity>
+                <issue date="AD">Issue Date: 29/09/2021</issue>
+                <valid period="years">Valid Years: 3</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 50</noOfUsers>
+            <rechargeable type="true">rechargeable: Yes</rechargeable>
+            <discount>Discount: 5%</discount>
+            <payment>Payment Method: Online</payment>
+            <rating>Rating: 4</rating>
+        </Gift>
+
+
+        <Gift id="Spotify">
+            <gname>Spotify</gname>
+            <gname>Buy</gname>
+            <type>Physical Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li34">$10: Rs.1200</costing>
+                <costing id="li35">$30: Rs.3600</costing>
+                <costing id="li36">$50: Rs.6000</costing>
+            </cost>
+            <category> Category: Entertainment</category>
+            <validity>
+                <issue date="AD">Issue Date: 06/03/2021</issue>
+                <valid period="years">Valid Years: 3</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 1000</noOfUsers>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <discount>Discount: 5%</discount>
+            <payment>Payment Method: Cash</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+        <Gift id="GooglePlay">
+            <gname>G. Play</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li38">$20: Rs.2400</costing>
+                <costing id="li39">$30: Rs.3600</costing>
+                <costing id="li40">$50: Rs.6000</costing>
+                <costing id="li41">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Entertainment</category>
+            <validity>
+                <issue date="AD">Issue Date: 17/01/2022</issue>
+                <valid period="years">Valid Years: 4</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 2000</noOfUsers>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <payment>Payment Method: Online</payment>
+            <rating>Rating: 5</rating>
+        </Gift>
+
+
+        <Gift id="PlayStation">
+            <gname>P.S. Store</gname>
+            <gname>Buy</gname>
+            <type>Physical Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li42">$20: Rs.2400</costing>
+                <costing id="li43">$50: Rs.6000</costing>
+                <costing id="li44">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: Entertainment</category>
+            <validity>
+                <issue date="AD">Issue Date: 16/04/2021</issue>
+                <valid period="years">Valid Years: 3</valid>
+                <validRegion location="country">Region: Nepal</validRegion>
+            </validity>
+            <noOfUsers>Number Of Users: 50</noOfUsers>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <discount>Discount: 10%</discount>
+            <payment>Payment Method: Cash</payment>
+            <rating>Rating: 3</rating>
+        </Gift>
+
+
+        <Gift id="Ebay">
+            <gname>Ebay</gname>
+            <gname>Buy</gname>
+            <type>Digital Card</type>
+            <cost currency="Rupees">
+                Pricings:
+                <costing id="li45">$15: Rs.1800</costing>
+                <costing id="li46">$50: Rs.6000</costing>
+                <costing id="li47">$100: Rs.12100</costing>
+            </cost>
+            <category> Category: E-Commerce</category>
+            <validity>
+                <issue date="AD">Issue Date: 10/10/2021</issue>
+                <valid period="years">Valid Years: 2</valid>
+                <validRegion location="country">Region: India</validRegion>
+            </validity>
+            <rechargeable type="false">rechargeable: No</rechargeable>
+            <discount>Discount: 5%</discount>
+            <payment>Payment Method: Online</payment>
+            <rating>Rating: 3</rating>
+        </Gift>
+    </Gifts>
+</Store>
